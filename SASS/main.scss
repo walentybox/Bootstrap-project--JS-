@@ -1,0 +1,700 @@
+@use "../css/fonts.css";
+
+$color-grey: #333333;
+$color-grey-light: #e9ecef;
+$color-grey-dark: #626161;
+$color-green-light: #81b441;
+$color-white: white;
+$color-black: black;
+$color-opacity: rgba(0, 0, 0, 0.8);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+i {
+  font-size: 1.4rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: $color-green-light;
+  background-color: $color-grey-light;
+  width: 50px;
+  height: 40px;
+  top: 95%;
+  transition: color 0.5s ease, background-color 0.5s ease;
+  &::after {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  &:hover {
+    color: $color-grey-light;
+    background-color: $color-green-light;
+  }
+}
+
+.btn-link {
+  display: inline-block;
+  color: $color-white;
+  background-color: $color-green-light;
+  margin: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  transition: color 0.5s ease, background-color 0.5s ease;
+  --bs-btn-hover-color: $color-white;
+  &--green {
+    background-color: $color-green-light;
+    color: $color-white;
+  }
+  &--green-active {
+    background-color: $color-green-light;
+    color: $color-white;
+    &:hover {
+      background-color: $color-grey;
+    }
+  }
+  &--grey {
+    background-color: $color-grey;
+    color: $color-white;
+  }
+  &--grey-active {
+    background-color: $color-grey;
+    color: $color-white;
+    &:hover {
+      background-color: $color-green-light;
+    }
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  color: $color-grey;
+}
+p {
+  font-size: 1.6rem;
+}
+
+.service {
+  &__item:hover .service__icon {
+    background-color: $color-green-light;
+    color: $color-white;
+  }
+  &__icon {
+    transition: background-color 0.5s ease;
+    background-color: $color-grey-light;
+    & i {
+      font-size: 2.4rem;
+    }
+  }
+}
+.about {
+  &__item:hover &__icon {
+    background-color: $color-green-light;
+    color: $color-white;
+  }
+  &__item:hover &__item-text .h4 {
+    color: $color-green-light;
+  }
+  &__icon {
+    transition: color 0.5s ease, background-color 0.5s ease;
+    max-width: 100px;
+    & i {
+      font-size: 2.4rem;
+    }
+  }
+  &__item-text .h4 {
+    transition: color 0.5s ease;
+  }
+  &__slider {
+  }
+  &__slide {
+    width: 480px;
+    height: 372px;
+    overflow: hidden;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__swiper-btn {
+    position: absolute;
+  }
+  .swiper-button-prev {
+    left: calc(0px);
+    top: calc(100% - 18px);
+  }
+  .swiper-button-next {
+    left: calc(50px);
+    top: calc(100% - 18px);
+  }
+}
+.header {
+  position: relative;
+
+  &__h2-color {
+    color: $color-green-light;
+  }
+
+  &__top-container {
+    padding-top: 20px;
+  }
+
+  .logo img {
+    width: 100px;
+    height: 50px;
+  }
+
+  &__li {
+    display: inline-block;
+  }
+
+  &__menu-item {
+    display: block;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  &__li-text {
+    font-size: 1.6rem;
+    display: inline-block;
+  }
+  &__menu-nav {
+    display: block;
+  }
+  &__link-item {
+    display: inline-block;
+    padding: 13px 10px;
+    text-decoration: none;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    &:hover {
+      background-color: $color-green-light;
+      color: $color-white;
+    }
+  }
+  &__menu-list {
+    margin-bottom: 0;
+  }
+
+  &__icon {
+    padding: 5px;
+    font-size: 1.2rem;
+    transition: color 0.5s ease;
+    &:hover {
+      color: $color-green-light;
+    }
+  }
+  &__burger {
+    display: block;
+    width: 25px;
+    height: 39px;
+    line-height: 39px;
+  }
+  &__burger-link {
+    color: $color-black;
+    padding: 5px;
+  }
+  &__navbar-toggler {
+    position: relative;
+    background-color: $color-black;
+    width: 30px;
+    height: 26px;
+    border-radius: 7px;
+  }
+  &__navbar-icon {
+    position: absolute;
+    left: 5px;
+    background-color: $color-white;
+    width: 18px;
+    height: 2px;
+    border-radius: 25px;
+  }
+
+  &__navbar-icon--first {
+    top: 4px;
+  }
+  &__navbar-icon--second {
+    top: 11px;
+  }
+  &__navbar-icon--third {
+    top: 18px;
+  }
+
+  &__img::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    background-color: $color-opacity;
+  }
+}
+
+.experts {
+  .swiper {
+    width: 100%;
+    height: 450px;
+  }
+
+  &__img-content {
+    max-width: 150px;
+    transition: box-shadow 0.8s;
+  }
+  &__img-social-content {
+    max-width: 150px;
+  }
+  &__img-span {
+    max-width: 150px;
+  }
+  &__img {
+    transition: opacity 0.8s;
+  }
+
+  &__staff:hover {
+    .experts__img-content {
+      box-shadow: 1px 1px 20px $color-grey;
+    }
+
+    .experts__li-items {
+      top: -40px;
+    }
+    .experts__img {
+      opacity: 0.5;
+    }
+  }
+  &__li-items {
+    transition: top 0.8s;
+    top: 50px;
+    width: 150px;
+    padding: 0px;
+  }
+
+  &__li-item {
+    padding: 10px;
+    background-color: $color-grey-light;
+    transition: background-color 0.8s ease;
+    & i {
+      transition: color 0.8s ease;
+      font-size: 2.4rem;
+    }
+    &:hover {
+      background-color: $color-green-light;
+      & i {
+        color: $color-white;
+      }
+    }
+  }
+
+  .swiper-button-prev {
+    left: calc(50% - 60px);
+  }
+  .swiper-button-next {
+    left: calc(50% + 15px);
+  }
+}
+
+.help {
+  &__img-box {
+    max-width: 720px;
+  }
+  &__text-box {
+    border-left: solid 4px $color-green-light;
+    & span {
+      color: $color-green-light;
+    }
+  }
+}
+
+.testimonial {
+  .swiper {
+    .swiper-pagination-bullet {
+      width: 15px;
+      height: 15px;
+      border: 1px solid $color-green-light;
+      background-color: transparent;
+      opacity: 1;
+      &:hover {
+        background-color: $color-green-light;
+      }
+    }
+    .swiper-pagination-bullet-active {
+      background-color: $color-green-light;
+    }
+  }
+  &__img {
+    border-radius: 50%;
+    border: 3px solid $color-green-light;
+  }
+  &__link {
+    color: $color-green-light;
+    font-size: 1.8rem;
+  }
+}
+
+.gallery {
+  &__img {
+    position: relative;
+
+    &:hover .gallery__img-span a {
+      opacity: 1;
+    }
+  }
+
+  &__img::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: $color-opacity;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+  }
+
+  &__img:hover::before {
+    opacity: 1;
+  }
+
+  &__img-figcaption {
+    position: absolute;
+  }
+
+  &__img-span a {
+    font-size: 4.6rem;
+    text-decoration: none;
+    transition: color 0.7s;
+    opacity: 0;
+    color: $color-white;
+
+    &:hover {
+      color: $color-green-light;
+      opacity: 1;
+    }
+
+    & i {
+      font-size: 3.6rem;
+    }
+  }
+
+  .row {
+    --bs-gutter-x: 0rem;
+  }
+
+  figure {
+    margin: 0 0 0;
+  }
+}
+
+.facts {
+  background-color: $color-grey;
+
+  &__item-h {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__item {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__item::before {
+    position: absolute;
+    content: "";
+    top: -15px;
+    right: 0;
+    left: 0;
+    bottom: -15px;
+    background-color: $color-green-light;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.7s ease;
+  }
+
+  &__item:hover::before {
+    opacity: 1;
+  }
+}
+
+.price {
+  &__head {
+    height: 135px;
+    width: 135px;
+    background-color: $color-white;
+  }
+  &__dollar {
+    font-size: 4rem;
+    color: $color-black;
+    transition: color 0.5s ease;
+  }
+  &__month {
+    font-size: 1.8rem;
+  }
+  &__link {
+    background-color: $color-grey;
+    color: $color-white;
+    transition: background-color 0.5s ease;
+  }
+  &__value {
+    background-color: $color-grey-light;
+    transition: background-color 0.8s ease, color 0.8s ease;
+  }
+
+  &__value:hover {
+    background-color: $color-grey;
+    color: $color-white;
+    .price__link {
+      background-color: $color-green-light;
+    }
+    .price__dollar {
+      color: $color-white;
+    }
+    .price__head {
+      background-color: $color-green-light;
+    }
+  }
+  ul {
+    padding-left: 0rem;
+  }
+  li {
+    padding-top: 10px;
+    font-size: 1.4rem;
+  }
+}
+
+.blog {
+  figure {
+    margin: 0 0 0rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    margin: 0;
+  }
+
+  &__icon {
+    top: 110%;
+    padding: 15px;
+    opacity: 0;
+    transition: top 0.5s ease, opacity 0.5s ease;
+    background-color: $color-green-light;
+
+    & .icon-link {
+      color: $color-white;
+      font-size: 2.8rem;
+    }
+  }
+
+  &__item:hover {
+    .blog__icon {
+      top: 50%;
+      opacity: 1;
+    }
+    .blog__image::before {
+      opacity: 1;
+    }
+  }
+
+  &__link {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: $color-green-light;
+  }
+
+  &__image::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: $color-opacity;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .blog__data {
+    background-color: $color-grey;
+    color: $color-white;
+  }
+
+  .bi-link-45deg {
+    background-color: $color-green-light;
+    color: $color-white;
+    padding: 5px;
+    top: 150px;
+  }
+}
+
+.call-us {
+  background-color: $color-green-light;
+}
+
+.form {
+  input:focus,
+  textarea:focus {
+    background-color: $color-white;
+    outline: none;
+  }
+
+  &__input.__error {
+    box-shadow: 0 0 15px red;
+  }
+
+  &__textarea-textarea {
+    min-height: 100px;
+  }
+  &__btn {
+    color: $color-white;
+    background-color: $color-green-light;
+    margin-top: 30px;
+    padding: 10px 20px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    transition: background-color 0.5s ease;
+    &:hover {
+      background-color: $color-grey;
+    }
+    &:active {
+      position: relative;
+      top: 5px;
+      box-shadow: 0px 5px 5px $color-grey;
+      border: $color-grey;
+    }
+  }
+}
+
+.footer {
+  position: relative;
+  color: $color-white;
+  background-color: $color-grey;
+  z-index: 0;
+
+  & .row {
+    position: relative;
+    z-index: 2;
+  }
+  h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 0 0 20px;
+  }
+  ul {
+    padding: 0;
+    li {
+      & a {
+        font-size: 1.4rem;
+        color: $color-white;
+        text-decoration: none;
+        display: inline-block;
+        padding: 0 0 10px;
+      }
+      & img {
+        max-width: 60px;
+        width: 100%;
+        margin: 0 5px 5px 0;
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__icon-circle {
+    border-radius: 50%;
+    width: 3.2rem;
+    height: 3.2rem;
+    background-color: $color-white;
+
+    & i {
+      display: inline-block;
+      color: $color-grey;
+      font-size: 1.8rem;
+      padding: 0.7rem;
+      transition: color 0.5s ease;
+      &:hover {
+        color: $color-green-light;
+      }
+    }
+  }
+
+  &__logo {
+    & p {
+      max-width: 80%;
+    }
+    & img {
+      max-width: 100px;
+    }
+  }
+  &::before {
+    position: absolute;
+    max-width: 34%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    content: "";
+    background-color: $color-green-light;
+    z-index: 1;
+    opacity: 0;
+  }
+
+  &__service-information {
+    & a {
+      transition: color 0.5s ease;
+      &:hover {
+        color: $color-green-light;
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .footer::before {
+    opacity: 1;
+  }
+  .header {
+    padding-top: 100px;
+
+    &__top-container {
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: $color-white;
+      box-shadow: 1px 1px 5px $color-black;
+    }
+
+    &__menu-item {
+      display: inline-block;
+    }
+    &__navbar {
+      display: none;
+    }
+  }
+}
