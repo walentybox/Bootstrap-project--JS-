@@ -1,0 +1,61 @@
+{
+  "service": [
+    {
+      "icon": "mic",
+      "title": "microphone",
+      "text": "Obcaecati ea sapiente, eligendi pariatur quam sed. Nulla sit nostrum suscipit eius.",
+      "about": "mic mic mic mic mic mic mic mic mic mic mic mic mic mic mic mic mic mic mic mic"
+    },
+    {
+      "icon": "headphones",
+      "title": "headphones",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati ea sapiente, eligendi pariatur quam sed. Nulla sit nostrum suscipit eius.",
+      "about": "headphones headphones headphones headphones headphones headphones headphones headphones headphones headphones"
+    },
+    {
+      "icon": "connection",
+      "title": "test wifi",
+      "text": "Obcaecati ea sapiente, eligendi pariatur quam sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "about": "connection connection connection connection connection connection connection connection connection connection"
+    }
+  ],
+  "price": [
+    {
+      "price": "10",
+      "description": "1 Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "package": "standart",
+      "projects": "2",
+      "storage": "3",
+      "users": "4",
+      "bandwidth": "5"
+    },
+    {
+      "price": "15",
+      "description": "2 orem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "package": "standart",
+      "projects": "6",
+      "storage": "7",
+      "users": "8",
+      "bandwidth": "9"
+    },
+    {
+      "price": "20",
+      "description": "3 Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "package": "standart",
+      "projects": "10",
+      "storage": "11",
+      "users": "12",
+      "bandwidth": "13"
+    },
+    {
+      "price": "25",
+      "description": "4 Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "package": "standart",
+      "projects": "14",
+      "storage": "15",
+      "users": "16",
+      "bandwidth": "17"
+    }
+  ],
+  "icons": ["facebook", "twitter", "pinterest", "instagram", "skype", "youtube"]
+}
